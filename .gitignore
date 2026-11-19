@@ -1,0 +1,19 @@
+# MLflow local stores and model files (not committed, per submission rules)
+mlruns/
+mlartifacts/
+mlflow.db
+*.db
+*.safetensors
+*.bin
+*.pt
+*.onnx
+model/
+models/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
+.ipynb_checkpoints/

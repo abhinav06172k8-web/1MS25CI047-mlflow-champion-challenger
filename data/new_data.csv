@@ -1,0 +1,9 @@
+id,text,expected
+1,"The canteen biryani at college today was honestly the best I've had all semester.",positive
+2,"My laptop died ten minutes before the lab submission and I lost all my unsaved work.",negative
+3,"The MLflow UI made comparing my runs surprisingly painless.",positive
+4,"The bus was forty minutes late again and nobody bothered to tell us why.",negative
+5,"I expected the sequel to be a letdown, but it turned out even better than the first one.",positive
+6,"Customer support kept me on hold for an hour and then hung up on me.",negative
+7,"Not bad at all, the hostel wifi finally works after the upgrade.",positive
+8,"The plot was so predictable that I fell asleep halfway through.",negative
