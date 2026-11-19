@@ -1,0 +1,9 @@
+id,text,expected,champion_prediction,champion_score,alias,model_version,hf_model_id,challenger_prediction,challenger_score,challenger_version,challenger_hf_model_id
+1,The canteen biryani at college today was honestly the best I've had all semester.,positive,positive,0.9988,champion,2,siebert/sentiment-roberta-large-english,positive,0.9995,1,distilbert-base-uncased-finetuned-sst-2-english
+2,My laptop died ten minutes before the lab submission and I lost all my unsaved work.,negative,negative,0.9995,champion,2,siebert/sentiment-roberta-large-english,negative,0.9998,1,distilbert-base-uncased-finetuned-sst-2-english
+3,The MLflow UI made comparing my runs surprisingly painless.,positive,positive,0.9988,champion,2,siebert/sentiment-roberta-large-english,negative,0.9886,1,distilbert-base-uncased-finetuned-sst-2-english
+4,The bus was forty minutes late again and nobody bothered to tell us why.,negative,negative,0.9995,champion,2,siebert/sentiment-roberta-large-english,negative,0.9966,1,distilbert-base-uncased-finetuned-sst-2-english
+5,"I expected the sequel to be a letdown, but it turned out even better than the first one.",positive,positive,0.9989,champion,2,siebert/sentiment-roberta-large-english,positive,0.9945,1,distilbert-base-uncased-finetuned-sst-2-english
+6,Customer support kept me on hold for an hour and then hung up on me.,negative,negative,0.9995,champion,2,siebert/sentiment-roberta-large-english,positive,0.8118,1,distilbert-base-uncased-finetuned-sst-2-english
+7,"Not bad at all, the hostel wifi finally works after the upgrade.",positive,positive,0.9985,champion,2,siebert/sentiment-roberta-large-english,positive,0.9958,1,distilbert-base-uncased-finetuned-sst-2-english
+8,The plot was so predictable that I fell asleep halfway through.,negative,negative,0.9995,champion,2,siebert/sentiment-roberta-large-english,negative,0.9998,1,distilbert-base-uncased-finetuned-sst-2-english

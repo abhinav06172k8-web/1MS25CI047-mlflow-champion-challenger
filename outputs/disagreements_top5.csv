@@ -1,6 +1,6 @@
 id,text,reference,pred_A_distilbert-sst2,score_A,pred_B_roberta-large,score_B,correct_model,comment
-6,the film tunes into a grief that could lead a man across centuries .,positive,negative,0.9631,positive,0.9988,B,
-18,true tale of courage -- and complicity -- at auschwitz is a harrowing drama that tries to tell of the unspeakable .,positive,negative,0.6913,positive,0.9983,B,
-35,i 'll bet the video game is a lot more fun than the film .,negative,positive,0.9977,negative,0.998,B,
-42,"the longer the movie goes , the worse it gets , but it 's actually pretty good in the first few minutes .",negative,positive,0.9996,negative,0.9981,B,
-61,"mcconaughey 's fun to watch , the dragons are okay , not much fire in the script .",positive,positive,0.7078,negative,0.9977,A,
+6,the film tunes into a grief that could lead a man across centuries .,positive,negative,0.9631,positive,0.9988,B,Mood words (grief) fool DistilBERT; RoBERTa reads the overall tone as appreciative.
+18,true tale of courage -- and complicity -- at auschwitz is a harrowing drama that tries to tell of the unspeakable .,positive,negative,0.6913,positive,0.9983,B,"Dark subject (Auschwitz, harrowing) reads as negative to A; B separates topic from verdict."
+35,i 'll bet the video game is a lot more fun than the film .,negative,positive,0.9977,negative,0.998,B,Sarcastic comparison with no negative word; only B catches the implied put-down.
+42,"the longer the movie goes , the worse it gets , but it 's actually pretty good in the first few minutes .",negative,positive,0.9996,negative,0.9981,B,Contrast with 'but ... pretty good' at the end misleads A; B weights 'the worse it gets'.
+61,"mcconaughey 's fun to watch , the dragons are okay , not much fire in the script .",positive,positive,0.7078,negative,0.9977,A,"Mixed review; A gets it right with low confidence, B is confidently wrong - B is not perfect."

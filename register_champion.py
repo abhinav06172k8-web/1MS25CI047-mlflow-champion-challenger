@@ -46,8 +46,10 @@ def register(client: MlflowClient, run_id: str):
         return mv
     mv = mlflow.register_model(f"runs:/{run_id}/model", C.REGISTERED_MODEL_NAME)
     run = client.get_run(run_id)
-    for k in ("hf_model_id", "role", "task"):
+    for k in ("hf_model_id", "task"):
         client.set_model_version_tag(C.REGISTERED_MODEL_NAME, mv.version, k, run.data.params.get(k, ""))
+    # role the model had going INTO the experiment (the alias shows the role after the decision)
+    client.set_model_version_tag(C.REGISTERED_MODEL_NAME, mv.version, "candidate_role", run.data.params.get("role", ""))
     client.set_model_version_tag(C.REGISTERED_MODEL_NAME, mv.version, "run_name", run.info.run_name)
     client.set_model_version_tag(C.REGISTERED_MODEL_NAME, mv.version, "macro_f1",
                                  f"{run.data.metrics.get('macro_f1', float('nan')):.4f}")
