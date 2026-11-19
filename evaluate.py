@@ -11,6 +11,7 @@ Usage:
     python evaluate.py --samples 10                           # quick debug run
 """
 import argparse
+import gc
 import json
 import os
 import platform
@@ -64,7 +65,7 @@ def build_eval_set(n: int, seed: int) -> pd.DataFrame:
 
     from datasets import load_dataset
 
-    ds = load_dataset("glue", "sst2", split="validation")
+    ds = load_dataset("nyu-mll/glue", "sst2", split="validation")
     ds = ds.shuffle(seed=seed).select(range(n))
     df = pd.DataFrame(
         {
@@ -215,6 +216,10 @@ def run_model(key: str, eval_df: pd.DataFrame, args) -> dict:
         )
         mlflow.set_tag("model_uri", f"runs:/{run.info.run_id}/model")
         print(f"[{run_name}] logged model: {info.model_uri}")
+
+        # free the weights before the next (bigger) model is loaded - keeps RAM low on laptops
+        del wrapper
+        gc.collect()
 
         return {
             "key": key,

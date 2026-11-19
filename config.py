@@ -10,11 +10,11 @@ EXPERIMENT_NAME = "hf-sentiment-champion-challenger"
 REGISTERED_MODEL_NAME = "sentiment-model"
 
 TASK = "sentiment"
-DATASET_NAME = "glue/sst2 (validation split)"
+DATASET_NAME = "nyu-mll/glue sst2 (validation split)"
 EVAL_SAMPLES = 200
 SEED = 42
-BATCH_SIZE = 16
-MAX_LENGTH = 256
+BATCH_SIZE = 8
+MAX_LENGTH = 128
 
 # Model A = current Champion, Model B = Challenger
 MODELS = {

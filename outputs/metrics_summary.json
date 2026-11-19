@@ -1,0 +1,52 @@
+{
+  "experiment": "hf-sentiment-champion-challenger",
+  "summary_run_id": "12657428290946b399c7d95a25f3c728",
+  "dataset": "nyu-mll/glue sst2 (validation split)",
+  "eval_samples": 200,
+  "seed": 42,
+  "rule": {
+    "primary_metric": "macro_f1",
+    "direction": "higher is better",
+    "margin": 0.01,
+    "tie_breaker": "within margin -> prefer faster model",
+    "guardrail": "reject Challenger if avg latency > 10.0x Champion"
+  },
+  "A_champion_candidate": {
+    "run_id": "37f4db0b1dcf4bc5947e43c284c98bae",
+    "run_name": "A_sentiment_distilbert-sst2",
+    "hf_model_id": "distilbert-base-uncased-finetuned-sst-2-english",
+    "metrics": {
+      "accuracy": 0.915,
+      "macro_f1": 0.9140524280189085,
+      "macro_precision": 0.9182986536107711,
+      "macro_recall": 0.9121193849864335,
+      "f1_positive": 0.9230769230769231,
+      "f1_negative": 0.9050279329608939,
+      "n_errors": 17,
+      "total_inference_s": 7.013471148000008,
+      "avg_latency_ms": 35.06735574000004
+    }
+  },
+  "B_challenger_candidate": {
+    "run_id": "408ea2285ae1412391056cecf7ec5833",
+    "run_name": "B_sentiment_roberta-large",
+    "hf_model_id": "siebert/sentiment-roberta-large-english",
+    "metrics": {
+      "accuracy": 0.935,
+      "macro_f1": 0.9344080324932516,
+      "macro_precision": 0.9370941558441559,
+      "macro_recall": 0.9329213144407598,
+      "f1_positive": 0.9406392694063926,
+      "f1_negative": 0.9281767955801105,
+      "n_errors": 13,
+      "total_inference_s": 44.435874625,
+      "avg_latency_ms": 222.17937312499998
+    }
+  },
+  "delta_primary_metric": 0.020355604474343036,
+  "latency_ratio_B_over_A": 6.335789181605392,
+  "winner": "B_sentiment_roberta-large",
+  "winner_hf_model_id": "siebert/sentiment-roberta-large-english",
+  "decision_reason": "Challenger beats Champion on macro_f1 by 2.04 pp (>= 1 pp margin) and passes the latency guardrail (6.3x).",
+  "n_disagreements": 16
+}

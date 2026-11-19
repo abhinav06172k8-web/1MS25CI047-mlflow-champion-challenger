@@ -1,0 +1,13 @@
+{
+  "run_name": "B_sentiment_roberta-large",
+  "hf_model_id": "siebert/sentiment-roberta-large-english",
+  "accuracy": 0.935,
+  "macro_f1": 0.9344080324932516,
+  "macro_precision": 0.9370941558441559,
+  "macro_recall": 0.9329213144407598,
+  "f1_positive": 0.9406392694063926,
+  "f1_negative": 0.9281767955801105,
+  "n_errors": 13,
+  "total_inference_s": 44.435874625,
+  "avg_latency_ms": 222.17937312499998
+}
